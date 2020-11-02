@@ -6,7 +6,7 @@
 //
 
 #import "OCTableViewController.h"
-
+#import "NSObject+Ext.h"
 @interface OCTableViewController ()
 @property (nonatomic, strong)NSArray *mainArray;
 @end
@@ -16,7 +16,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad]; 
     self.mainArray = @[@{@"title":@"方法调用方式",@"class":@"",@"selector":@"fundationPerform"},
-                       @{@"title":@"",@"class":@"",@"selector":@""},
+                       @{@"title":@"Object方法调用",@"class":@"",@"selector":@"objectFundation"},
                        @{@"title":@"",@"class":@"",@"selector":@""},];
 }
 #pragma mark == 函数调用方式
@@ -47,6 +47,9 @@
     static int a = 0;
     a++;
     NSLog(@"%s被调用%d次",__func__,a);
+}
+- (void)objectFundation {
+    [NSObject objectAction];
 }
 #pragma mark - Table view data source
 
