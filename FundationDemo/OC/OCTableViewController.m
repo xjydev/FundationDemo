@@ -12,12 +12,23 @@
 @end
 
 @implementation OCTableViewController
-
++ (void)load {
+    NSLog(@"load %s",__func__);
+}
 - (void)viewDidLoad {
     [super viewDidLoad]; 
     self.mainArray = @[@{@"title":@"方法调用方式",@"class":@"",@"selector":@"fundationPerform"},
                        @{@"title":@"Object方法调用",@"class":@"",@"selector":@"objectFundation"},
-                       @{@"title":@"",@"class":@"",@"selector":@""},];
+                       @{@"title":@"静态调用",@"class":@"",@"selector":@"1"},@{@"title":@"c函数调用",@"class":@"",@"selector":@"2"},];
+}
+#pragma mark == 静态函数
+static BOOL staticFundation () {
+    NSLog(@"static %s",__func__);
+    return YES;
+}
+int addFundation(int a,int b){
+    NSLog(@"add %s",__func__);
+    return  a+b;
 }
 #pragma mark == 函数调用方式
 - (void)fundationPerform {
@@ -85,10 +96,19 @@
     }
     NSString *selectorStr = [dict objectForKey:@"selector"];
     if (selectorStr.length > 0) {
-        SEL sel = NSSelectorFromString(selectorStr);
-        if ([self canPerformAction:sel withSender:nil]) {
-            [self performSelector:sel];
+        if (selectorStr.intValue == 1) {
+            staticFundation();
         }
+        else if (selectorStr.intValue == 2){
+            addFundation(1, 2);
+        }
+        else {
+            SEL sel = NSSelectorFromString(selectorStr);
+            if ([self canPerformAction:sel withSender:nil]) {
+                [self performSelector:sel];
+            }
+        }
+        
     }
 }
 

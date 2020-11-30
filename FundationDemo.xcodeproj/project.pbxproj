@@ -11,6 +11,8 @@
 		E46F56AD255027B600F0E289 /* SwiftTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46F56AB255027B600F0E289 /* SwiftTableViewController.swift */; };
 		E46F56B6255027DC00F0E289 /* FundationObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E46F56B5255027DC00F0E289 /* FundationObject.m */; };
 		E46F56BC2550282000F0E289 /* NSObject+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = E46F56BB2550282000F0E289 /* NSObject+Ext.m */; };
+		E47795E5256F94C000C95563 /* OCFatherObj.m in Sources */ = {isa = PBXBuildFile; fileRef = E47795E4256F94C000C95563 /* OCFatherObj.m */; };
+		E47795EB256F94D600C95563 /* OCSonObj.m in Sources */ = {isa = PBXBuildFile; fileRef = E47795EA256F94D600C95563 /* OCSonObj.m */; };
 		E4C02855254C215800FD783C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E4C02854254C215800FD783C /* AppDelegate.m */; };
 		E4C02858254C215800FD783C /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E4C02857254C215800FD783C /* SceneDelegate.m */; };
 		E4C0285E254C215800FD783C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4C0285C254C215800FD783C /* Main.storyboard */; };
@@ -46,6 +48,10 @@
 		E46F56B5255027DC00F0E289 /* FundationObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FundationObject.m; sourceTree = "<group>"; };
 		E46F56BA2550282000F0E289 /* NSObject+Ext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Ext.h"; sourceTree = "<group>"; };
 		E46F56BB2550282000F0E289 /* NSObject+Ext.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Ext.m"; sourceTree = "<group>"; };
+		E47795E3256F94C000C95563 /* OCFatherObj.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCFatherObj.h; sourceTree = "<group>"; };
+		E47795E4256F94C000C95563 /* OCFatherObj.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCFatherObj.m; sourceTree = "<group>"; };
+		E47795E9256F94D600C95563 /* OCSonObj.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCSonObj.h; sourceTree = "<group>"; };
+		E47795EA256F94D600C95563 /* OCSonObj.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCSonObj.m; sourceTree = "<group>"; };
 		E4C02850254C215800FD783C /* FundationDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FundationDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4C02853254C215800FD783C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E4C02854254C215800FD783C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -97,6 +103,10 @@
 				E46F56A9255027B600F0E289 /* OCTableViewController.m */,
 				E46F56B4255027DC00F0E289 /* FundationObject.h */,
 				E46F56B5255027DC00F0E289 /* FundationObject.m */,
+				E47795E3256F94C000C95563 /* OCFatherObj.h */,
+				E47795E4256F94C000C95563 /* OCFatherObj.m */,
+				E47795E9256F94D600C95563 /* OCSonObj.h */,
+				E47795EA256F94D600C95563 /* OCSonObj.m */,
 				E46F56BA2550282000F0E289 /* NSObject+Ext.h */,
 				E46F56BB2550282000F0E289 /* NSObject+Ext.m */,
 			);
@@ -301,10 +311,12 @@
 				E46F56BC2550282000F0E289 /* NSObject+Ext.m in Sources */,
 				E4C02855254C215800FD783C /* AppDelegate.m in Sources */,
 				E4C02866254C215B00FD783C /* main.m in Sources */,
+				E47795EB256F94D600C95563 /* OCSonObj.m in Sources */,
 				E4C02858254C215800FD783C /* SceneDelegate.m in Sources */,
 				E46F56B6255027DC00F0E289 /* FundationObject.m in Sources */,
 				E46F56AC255027B600F0E289 /* OCTableViewController.m in Sources */,
 				E46F56AD255027B600F0E289 /* SwiftTableViewController.swift in Sources */,
+				E47795E5256F94C000C95563 /* OCFatherObj.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
