@@ -10,6 +10,9 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface OCSonObj : OCFatherObj
+
+@property (nonatomic, weak) NSObject * forwardObj;
+
 + (void)objectAction;
 @end
 
