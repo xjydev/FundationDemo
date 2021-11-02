@@ -7,6 +7,8 @@
 
 #import "OCTableViewController.h"
 #import "NSObject+Ext.h"
+#import <objc/runtime.h>
+#import <objc/message.h>
 @interface OCTableViewController ()
 @property (nonatomic, strong)NSArray *mainArray;
 @end
@@ -19,7 +21,8 @@
     [super viewDidLoad]; 
     self.mainArray = @[@{@"title":@"方法调用方式",@"class":@"",@"selector":@"fundationPerform"},
                        @{@"title":@"Object方法调用",@"class":@"",@"selector":@"objectFundation"},
-                       @{@"title":@"静态调用",@"class":@"",@"selector":@"1"},@{@"title":@"c函数调用",@"class":@"",@"selector":@"2"},];
+                       @{@"title":@"静态调用",@"class":@"",@"selector":@"1"},@{@"title":@"c函数调用",@"class":@"",@"selector":@"2"},@{@"title":@"msgSend",@"class":@"",@"selector":@"msgSendAction"},];
+    
 }
 #pragma mark == 静态函数
 static BOOL staticFundation () {
@@ -44,8 +47,8 @@ int addFundation(int a,int b){
     [self performSelector:sel];
     //5
     IMP imp = [self methodForSelector:@selector(fundetionBeInvoked)];
-    void (*impFunc)(id) = (void *)imp;
-    impFunc(self);
+    void (*impFunc)(id,SEL) = (void *)imp;
+    impFunc(self,@selector(fundetionBeInvoked));
     //6 NSInvocation 封装方法，对应的对象，参数，的对象。
     NSMethodSignature *methSig = [self methodSignatureForSelector:@selector(fundetionBeInvoked)];
     NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:methSig];
@@ -53,6 +56,13 @@ int addFundation(int a,int b){
     [invocation setTarget:self];
     [invocation invoke];
     
+}
+- (void)msgSendAction {
+    NSInteger v =  ((NSInteger (*)(id, SEL,NSInteger))objc_msgSend)((id)nil, @selector(sendInt:),5);
+    NSLog(@"v === %@",@(v));
+}
+- (NSInteger)sendInt:(NSInteger)a {
+    return a*a;
 }
 - (void)fundetionBeInvoked {
     static int a = 0;
