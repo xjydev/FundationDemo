@@ -8,5 +8,7 @@
 #import "OCFatherObj.h"
 
 @implementation OCFatherObj
-
+- (void)objFundation {
+    NSLog(@" == %s",__func__);
+}
 @end

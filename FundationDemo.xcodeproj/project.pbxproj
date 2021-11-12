@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6C800937273E080A001148DE /* OCSonObj+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C800936273E080A001148DE /* OCSonObj+Category.m */; };
 		E46F56AC255027B600F0E289 /* OCTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E46F56A9255027B600F0E289 /* OCTableViewController.m */; };
 		E46F56AD255027B600F0E289 /* SwiftTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46F56AB255027B600F0E289 /* SwiftTableViewController.swift */; };
 		E46F56B6255027DC00F0E289 /* FundationObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E46F56B5255027DC00F0E289 /* FundationObject.m */; };
@@ -41,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6C800935273E080A001148DE /* OCSonObj+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OCSonObj+Category.h"; sourceTree = "<group>"; };
+		6C800936273E080A001148DE /* OCSonObj+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "OCSonObj+Category.m"; sourceTree = "<group>"; };
 		E46F56A8255027B600F0E289 /* OCTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCTableViewController.h; sourceTree = "<group>"; };
 		E46F56A9255027B600F0E289 /* OCTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCTableViewController.m; sourceTree = "<group>"; };
 		E46F56AB255027B600F0E289 /* SwiftTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftTableViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +110,8 @@
 				E47795E4256F94C000C95563 /* OCFatherObj.m */,
 				E47795E9256F94D600C95563 /* OCSonObj.h */,
 				E47795EA256F94D600C95563 /* OCSonObj.m */,
+				6C800935273E080A001148DE /* OCSonObj+Category.h */,
+				6C800936273E080A001148DE /* OCSonObj+Category.m */,
 				E46F56BA2550282000F0E289 /* NSObject+Ext.h */,
 				E46F56BB2550282000F0E289 /* NSObject+Ext.m */,
 			);
@@ -310,6 +315,7 @@
 			files = (
 				E46F56BC2550282000F0E289 /* NSObject+Ext.m in Sources */,
 				E4C02855254C215800FD783C /* AppDelegate.m in Sources */,
+				6C800937273E080A001148DE /* OCSonObj+Category.m in Sources */,
 				E4C02866254C215B00FD783C /* main.m in Sources */,
 				E47795EB256F94D600C95563 /* OCSonObj.m in Sources */,
 				E4C02858254C215800FD783C /* SceneDelegate.m in Sources */,

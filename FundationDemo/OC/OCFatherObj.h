@@ -10,7 +10,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface OCFatherObj : NSObject
-
+- (void)objFundation;
 @end
 
 NS_ASSUME_NONNULL_END

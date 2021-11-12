@@ -6,6 +6,7 @@
 //
 
 #import "OCTableViewController.h"
+#import "OCSonObj+Category.h"
 #import "NSObject+Ext.h"
 #import <objc/runtime.h>
 #import <objc/message.h>
@@ -21,7 +22,7 @@
     [super viewDidLoad]; 
     self.mainArray = @[@{@"title":@"方法调用方式",@"class":@"",@"selector":@"fundationPerform"},
                        @{@"title":@"Object方法调用",@"class":@"",@"selector":@"objectFundation"},
-                       @{@"title":@"静态调用",@"class":@"",@"selector":@"1"},@{@"title":@"c函数调用",@"class":@"",@"selector":@"2"},@{@"title":@"msgSend",@"class":@"",@"selector":@"msgSendAction"},];
+                       @{@"title":@"静态调用",@"class":@"",@"selector":@"1"},@{@"title":@"c函数调用",@"class":@"",@"selector":@"2"},@{@"title":@"msgSend",@"class":@"",@"selector":@"msgSendAction"},@{@"title":@"调用顺序",@"class":@"",@"selector":@"ocSonFundation"},];
     
 }
 #pragma mark == 静态函数
@@ -52,6 +53,7 @@ int addFundation(int a,int b){
     //6 NSInvocation 封装方法，对应的对象，参数，的对象。
     NSMethodSignature *methSig = [self methodSignatureForSelector:@selector(fundetionBeInvoked)];
     NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:methSig];
+//    [invocation setArgument:&argument atIndex:2];
     [invocation setSelector:@selector(fundetionBeInvoked)];
     [invocation setTarget:self];
     [invocation invoke];
@@ -71,6 +73,10 @@ int addFundation(int a,int b){
 }
 - (void)objectFundation {
     [NSObject objectAction];
+}
+- (void)ocSonFundation {
+    OCSonObj *obj = [[OCSonObj alloc]init];
+    [obj objFundation];
 }
 #pragma mark - Table view data source
 

@@ -8,7 +8,9 @@
 #import "OCSonObj.h"
 
 @implementation OCSonObj
-
+- (void)objFundation {
+    NSLog(@" == %s",__func__);
+}
 + (BOOL)resolveClassMethod:(SEL)sel {
     NSLog(@" == %s",__func__);
     return NO;
